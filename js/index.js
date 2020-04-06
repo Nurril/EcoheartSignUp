@@ -66,9 +66,11 @@ var firebaseConfig =
 
         result.catch(function(error)
         {
+          
+            var result = firebase.auth().createUserWithEmailAndPassword(email, password);
             if (password == cpassword )
             {
-                var errorCode = error.code;
+            var errorCode = error.code;
             var errorMessage = error.message;
 
             console.log(errorCode);
@@ -76,7 +78,7 @@ var firebaseConfig =
 
             window.alert("Message: "+ errorMessage);
 
-            var result = firebase.auth().createUserWithEmailAndPassword(email, password);
+           
 
             }
             else

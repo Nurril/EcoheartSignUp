@@ -31,8 +31,8 @@ var firebaseConfig =
             var errorCode = error.code;
             var errorMessage = error.message;
 
-            Console.log(errorCode);
-            onsole.log(errorMessage);
+            console.log(errorCode);
+            console.log(errorMessage);
 
             window.alert("Message: "+ errorMessage);
         });
@@ -110,7 +110,7 @@ var firebaseConfig =
             var errorMessage = error.message;
 
             console.log(errorCode);
-            onsole.log(errorMessage);
+            console.log(errorMessage);
 
             window.alert("Message: "+ errorMessage);
         });

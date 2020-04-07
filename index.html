@@ -75,7 +75,20 @@
                 {
                     if(user)
                     {
-                     window.location.href = "https://nurril.github.io/ecoheart/";
+                        
+                        var userID = firebase.auth().currentUser.uid;
+                        firebase.database().ref(userID).once('value').then(function(snapshot)
+                        {
+                            if(snapshot.val())
+                            {
+                                window.location.href = "https://nurril.github.io/ecoheart/";
+                            }
+                            else
+                            {
+                                window.location.href = "https://nurril.github.io/EcoheartAccountDetail/";
+                            }
+                        })
+                      
                     }
                 });
             </script>
